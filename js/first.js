@@ -1,34 +1,15 @@
 // esercizio nomi e Cognomi
 
-// esercizio provato con for
+var surnameUser = prompt('Scrivi il tuo cognome');
+var surnameList = ['Venti', 'Scalvini', 'Alessi', 'Chiefa', 'Masnada'];
+surnameList.push(surnameUser);
 
-var surname = [];
-var index = [];
+console.log(surnameList);
+console.log('Il tuo cognome: ' + surnameUser);
+console.log(surnameList.sort());
 
-for (var i = 0; i < 3; i++) {
-  var info = prompt('Scrivi il tuo cognome');
-  surname.push(info);
-  index.push(i + 1);
-  console.log(info);
+var surnamePosition = 0;
+while (surnameList[surnamePosition] != surnameUser) {
+  surnamePosition++;
 }
-
-console.log(surname.sort());
-console.log(index);
-
-
-// esercizio provato con while
-
-// var surname = [];
-// var index = [];
-// var i = 0;
-//
-// while (i < 3) {
-//   var info = prompt('Scrivi il tuo cognome');
-//   surname.push(info);
-//   index.push(i + 1);
-//   i++;
-//   console.log(info);
-// }
-//
-// console.log(surname.sort());
-// console.log(index);
+console.log('La posizione del tuo cognome è : ' + (surnamePosition + 1));
