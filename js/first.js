@@ -8,8 +8,20 @@ console.log(surnameList);
 console.log('Il tuo cognome: ' + surnameUser);
 console.log(surnameList.sort());
 
-var surnamePosition = 0;
-while (surnameList[surnamePosition] != surnameUser) {
-  surnamePosition++;
+// variante con ciclo for
+
+for (var i = 0; i < surnameList.length; i++) {
+  var surnamePosition = surnameList[i];
+  if (surnamePosition == surnameUser) {
+    console.log('La posizione del tuo cognome è : ' + (i + 1));
+    break;
+  }
 }
-console.log('La posizione del tuo cognome è : ' + (surnamePosition + 1));
+
+// variante con ciclo while
+
+// var surnamePosition = 0;
+// while (surnameList[surnamePosition] != surnameUser) {
+//   surnamePosition++;
+// }
+// console.log('La posizione del tuo cognome è : ' + (surnamePosition + 1));
